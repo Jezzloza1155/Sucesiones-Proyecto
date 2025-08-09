@@ -70,7 +70,7 @@ function preparardatos(ejercicio,resta,puntosx){
             mode: 'markers',
             x: puntosx,
             y: resta,
-            name: "{Sn-An}", 
+            name: "{An-Sn}", 
             marker: {
                 color: "blue"
             }
@@ -87,9 +87,9 @@ function dibujarpuntos(entrada,datos){
     Plotly.newPlot(entrada,datos,layout);
 }
 function rellenarTabla(ejercicios,resta,maximo,idTabla){
-    let tabla="",insertarTabla
+    let tabla=""
     for (let i = 0; i <= maximo; i++) {
-        tabla=`<tr><td>${i}</td><td>${ejercicios[i]}</td><td>${resta[i]}</td></tr>`+tabla;
+        tabla = `<tr><td>${i}</td><td>${ejercicios[i]}</td><td>${resta[i]}</td></tr>` + tabla;
     }
     idTabla.innerHTML = tabla;
 }
